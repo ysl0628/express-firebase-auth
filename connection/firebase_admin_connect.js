@@ -4,8 +4,7 @@ var serviceAccount = require('../express-firebase-auth-2caa3-firebase-adminsdk-t
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL:
-    'https://express-firebase-auth-2caa3-default-rtdb.asia-southeast1.firebasedatabase.app',
+  databaseURL: process.env.DATABASE_URL,
 })
 
 const db = admin.database()
